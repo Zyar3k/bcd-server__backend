@@ -1,8 +1,9 @@
+import { ObjectId } from "mongodb";
 import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 
 const Product = new Schema({
-  _id: { type: String, required: true },
+  _id: { type: ObjectId, required: true },
   name: { type: String, required: true },
   description: { type: String, required: true },
   img: { type: String, required: true },

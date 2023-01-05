@@ -1,4 +1,5 @@
 const express = require("express");
+const config = require("./config");
 
 const app = express();
 
@@ -8,7 +9,8 @@ app.get("/api/products", (req, res) => {
   res.json("=> api products");
 });
 
-app.listen(8000, function () {
-  console.log(`Server is running on port: `, 8000);
+app.listen(config.PORT, function () {
+  console.log(`Server is running on port: ${config.PORT}`);
+  console.log(`Server is working on http://localhost:${8000}`);
   console.log("Happy coding!");
 });

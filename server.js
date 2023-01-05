@@ -1,16 +1,18 @@
+require("dotenv").config();
+
 const express = require("express");
-const config = require("./config");
 
 const app = express();
+const PORT = process.env.PORT || 8888;
 
-app.use(express.json());
+const start = async () => {
+  try {
+    app.listen(PORT, () => {
+      console.log(`Server started: http://localhost:${PORT}`);
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
 
-app.get("/api/products", (req, res) => {
-  res.json("=> api products");
-});
-
-app.listen(config.PORT, function () {
-  console.log(`Server is running on port: ${config.PORT}`);
-  console.log(`Server is working on http://localhost:${8000}`);
-  console.log("Happy coding!");
-});
+start();

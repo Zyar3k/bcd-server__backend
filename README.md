@@ -16,11 +16,11 @@
 ##### Available endpoints:
 
 ```sh
-- /products - all products
+- /api/products - all products
 ```
 
 ```sh
-- /product/:id - products by _id
+- /api/product/:id - products by _id
 ```
 
 ### Installation
